@@ -53,3 +53,22 @@ function loseRound(playerChoice, computerChoice) {
   );
   computerScore++;
 }
+
+for (let i = 1; i <= 3; i++) {
+  playRound();
+}
+
+if (playerScore > computerScore) {
+  alert(
+    `You got ${playerScore} points. Computer got ${computerScore}. You're a Winner`
+  );
+} else if (playerScore < computerScore) {
+  alert(
+    `You got ${playerScore} points. Computer got ${computerScore}. You lose.`
+  );
+} else if (playerScore == computerScore) {
+  alert(
+    `You got ${playerScore} points. Computer got ${computerScore}. It's a tie.
+      `
+  );
+}
