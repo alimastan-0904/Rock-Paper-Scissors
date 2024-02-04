@@ -34,6 +34,13 @@ main {
   flex-basis: 50%;
 }
 
+.avatar,
+.choices,
+.choices > *,
+.score {
+  border: 3px solid #006400;
+}
+
 @media screen and (max-width: 900px) {
   #row {
     flex-direction: column;
