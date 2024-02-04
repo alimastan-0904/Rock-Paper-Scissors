@@ -25,3 +25,16 @@ body,
 main {
   flex-grow: 1;
 }
+
+#left,
+#right {
+  flex-basis: 50%;
+}
+
+@media screen and (max-width: 720px) {
+  #row {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+}
