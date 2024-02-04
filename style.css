@@ -5,3 +5,23 @@
   margin: 0;
   padding: 0;
 }
+
+body,
+#wrapper {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+#wrapper,
+#row,
+.choices {
+  display: flex;
+}
+
+#wrapper {
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
