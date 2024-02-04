@@ -31,15 +31,24 @@ main {
   flex-basis: 50%;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 900px) {
   #row {
     flex-direction: column;
     width: 100%;
     gap: 0;
+  }
+
+  .choices img {
+    height: 100px;
   }
 }
 
 img {
   object-fit: cover;
   max-width: 100%;
+}
+
+.choices {
+  justify-content: center;
+  gap: 2rem;
 }
