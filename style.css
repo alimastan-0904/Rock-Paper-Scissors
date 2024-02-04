@@ -52,3 +52,11 @@ img {
   justify-content: center;
   gap: 2rem;
 }
+
+#logo,
+.choices,
+.score,
+#textbox,
+footer {
+  padding: 1rem 0 1rem 0;
+}
