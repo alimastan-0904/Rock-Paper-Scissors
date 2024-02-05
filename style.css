@@ -41,21 +41,18 @@ main {
   border: 3px solid #006400;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   #row {
     flex-direction: column;
     width: 100%;
     gap: 0;
-  }
-
-  .choices img {
-    height: 100px;
   }
 }
 
 img {
   object-fit: cover;
   max-width: 100%;
+  height: auto;
 }
 
 .choices {
