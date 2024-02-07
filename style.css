@@ -110,3 +110,18 @@ img {
     padding: 0.25rem 0 0.25rem 0;
   }
 }
+
+@media screen and (min-height: 1000px) {
+  h1 {
+    font-size: 2.8rem;
+    margin-top: 4rem;
+  }
+  #text_container {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
+
+  #row {
+    margin-top: 4rem;
+  }
+}
