@@ -45,10 +45,12 @@ footer {
   border: 3px solid #006400;
 }
 
-@media screen and (max-width: 768px) {
-  #row {
-    flex-direction: column;
-  }
+#logo,
+.avatar,
+.score,
+#text_container > *,
+footer {
+  padding: 1rem 0 1rem 0;
 }
 
 img {
@@ -62,10 +64,49 @@ img {
   gap: 2rem;
 }
 
-#logo,
-.avatar,
-.score,
-#text_container > *,
-footer {
-  padding: 1rem 0 1rem 0;
+@media screen and (max-width: 430px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  #left,
+  #right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #row,
+  .choices {
+    flex-direction: column;
+  }
+
+  #row {
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .choices {
+    flex-basis: 20%;
+    gap: 1rem;
+  }
+
+  .avatar,
+  .choices {
+    padding: 0;
+  }
+
+  .avatar {
+    flex-basis: 70%;
+    flex-grow: 1;
+  }
+
+  .score {
+    flex-basis: 100%;
+  }
+
+  .score,
+  #text_container > * {
+    font-size: 0.75rem;
+    padding: 0.25rem 0 0.25rem 0;
+  }
 }
