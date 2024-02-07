@@ -29,6 +29,10 @@ main {
   flex-grow: 1;
 }
 
+footer {
+  font-size: 0.5rem;
+}
+
 #left,
 #right {
   flex-basis: 50%;
@@ -60,9 +64,8 @@ img {
 
 #logo,
 .avatar,
-.choices,
 .score,
-#textbox,
+#text_container > *,
 footer {
   padding: 1rem 0 1rem 0;
 }
