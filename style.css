@@ -125,3 +125,21 @@ img {
     margin-top: 4rem;
   }
 }
+
+@media screen and (max-height: 600px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  #text_container {
+    margin-top: 1.5rem;
+  }
+
+  #row {
+    margin-top: 1.5rem;
+  }
+
+  .avatar {
+    display: none;
+  }
+}
