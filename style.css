@@ -2,11 +2,14 @@
 
 * {
   font-family: "Press Start 2P", system-ui, Arial, Helvetica, sans-serif;
-  margin: 0;
   padding: 0;
   text-align: center;
   color: #006400;
   background-color: black;
+}
+
+body {
+  margin: 0;
 }
 
 body,
@@ -29,8 +32,8 @@ main {
   flex-grow: 1;
 }
 
-footer {
-  font-size: 0.5rem;
+#text_container {
+  margin-bottom: 3%;
 }
 
 #left,
@@ -38,108 +41,21 @@ footer {
   flex-basis: 50%;
 }
 
-.avatar,
-.choices,
-#right > .choices > *,
-.score {
-  border: 3px solid #006400;
+.choices {
+  justify-content: center;
+  gap: 2rem;
 }
 
-#logo,
 .avatar,
+.choices,
 .score,
-#text_container > *,
-footer {
-  padding: 1rem 0 1rem 0;
+#right > .choices > div {
+  border: 2px solid #006400;
 }
 
 img {
   object-fit: cover;
   max-width: 100%;
   height: auto;
-}
-
-.choices {
-  justify-content: center;
-  gap: 2rem;
-}
-
-@media screen and (max-width: 430px) {
-  h1 {
-    font-size: 1.25rem;
-  }
-
-  #left,
-  #right {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #row,
-  .choices {
-    flex-direction: column;
-  }
-
-  #row {
-    margin-top: 1.5rem;
-    gap: 1.5rem;
-  }
-
-  .choices {
-    flex-basis: 20%;
-    gap: 1rem;
-  }
-
-  .avatar,
-  .choices {
-    padding: 0;
-  }
-
-  .avatar {
-    flex-basis: 70%;
-    flex-grow: 1;
-  }
-
-  .score {
-    flex-basis: 100%;
-  }
-
-  .score,
-  #text_container > * {
-    font-size: 0.75rem;
-    padding: 0.25rem 0 0.25rem 0;
-  }
-}
-
-@media screen and (min-height: 1000px) {
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  #text_container {
-    margin-top: 3rem;
-    font-size: 1.5rem;
-  }
-
-  #row {
-    margin-top: 4rem;
-  }
-}
-
-@media screen and (max-height: 600px) {
-  h1 {
-    font-size: 1.25rem;
-  }
-
-  #text_container {
-    margin-top: 1.5rem;
-  }
-
-  #row {
-    margin-top: 1.5rem;
-  }
-
-  .avatar {
-    display: none;
-  }
+  filter: grayscale(1);
 }
