@@ -6,6 +6,7 @@
   text-align: center;
   color: #006400;
   background-color: black;
+  box-sizing: border-box;
 }
 
 body {
@@ -32,7 +33,12 @@ main {
   flex-grow: 1;
 }
 
+#logo {
+  margin-bottom: 1%;
+}
+
 #text_container {
+  padding: 0 2rem 0 2rem;
   margin-bottom: 3%;
 }
 
@@ -58,4 +64,8 @@ img {
   max-width: 100%;
   height: auto;
   filter: grayscale(1);
+}
+
+footer {
+  font-size: 0.5rem;
 }
