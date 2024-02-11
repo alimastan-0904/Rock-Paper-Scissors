@@ -66,6 +66,169 @@ img {
   filter: grayscale(1);
 }
 
+.score {
+  padding: 0.5rem;
+}
+
 footer {
   font-size: 0.5rem;
+}
+@media screen and (min-height: 1100px) {
+  #text_container {
+    margin-bottom: 1%;
+  }
+
+  #row,
+  .choices {
+    flex-direction: column;
+  }
+
+  #left,
+  #right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .avatar {
+    flex-basis: 80%;
+  }
+
+  .choices {
+    flex-basis: 20%;
+    align-items: center;
+  }
+
+  .score {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .avatar img {
+    width: 400px;
+  }
+
+  .choices img {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+  }
+
+  #text_container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.75rem;
+  }
+
+  #row,
+  .choices {
+    flex-direction: column;
+  }
+
+  #left,
+  #right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .avatar {
+    flex-basis: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatar img {
+    width: 300px;
+  }
+
+  .choices {
+    flex-basis: 20%;
+    align-items: center;
+  }
+
+  .choices img {
+    width: 100px;
+  }
+
+  .score {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #left,
+  #right {
+    width: 80%;
+  }
+  .avatar img {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #text_container {
+    width: 100%;
+    font-size: 0.6rem;
+    margin: 5% 0 5% 0;
+  }
+
+  #left,
+  #right {
+    width: 90%;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  #text_container {
+    margin-top: 1%;
+    font-size: 0.75rem;
+  }
+
+  #row {
+    flex-direction: column;
+  }
+
+  #left,
+  #right {
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .choices {
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .choices img {
+    width: 80px;
+  }
+
+  .avatar {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  #row {
+    flex-direction: row;
+  }
+
+  .choices {
+    gap: 1rem;
+  }
 }
