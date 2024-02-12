@@ -142,6 +142,8 @@ function checkForWinningScore(winningScore) {
 
 function playerWin(winningScore) {
   showPlayerWinMessage(winningScore);
+  showWinAvatar();
+  playWinSound();
 }
 
 function showPlayerWinMessage(winningScore) {
@@ -151,8 +153,19 @@ function showPlayerWinMessage(winningScore) {
   text_container.appendChild(finalResults);
 }
 
+function showWinAvatar() {
+  const playerAvatar = document.querySelector("#left > .avatar img");
+  playerAvatar.src = "./images/win.png";
+}
+
+function playWinSound() {
+  const winSound = new Audio("./music/win.mp3");
+  winSound.play();
+}
+
 function playerLose(winningScore) {
   showPlayerLoseMessage(winningScore);
+  showLoseAvatar();
 }
 
 function showPlayerLoseMessage(winningScore) {
@@ -162,26 +175,12 @@ function showPlayerLoseMessage(winningScore) {
   text_container.appendChild(finalResults);
 }
 
-function playRockPaperScissors() {
-  let playerScore = 0;
-  let computerScore = 0;
+function showLoseAvatar() {
+  const playerAvatar = document.querySelector("#left > .avatar img");
+  playerAvatar.src = "./images/lose.png";
+}
 
-  for (let i = 1; i <= 3; i++) {
-    playRound();
-  }
-
-  if (playerScore > computerScore) {
-    alert(
-      `You got ${playerScore} points. Computer got ${computerScore}. You're a Winner`
-    );
-  } else if (playerScore < computerScore) {
-    alert(
-      `You got ${playerScore} points. Computer got ${computerScore}. You lose.`
-    );
-  } else if (playerScore == computerScore) {
-    alert(
-      `You got ${playerScore} points. Computer got ${computerScore}. It's a tie.
-      `
-    );
-  }
+function playLoseSound() {
+  const loseSound = new Audio("./music/lose.mp3");
+  loseSound.play();
 }
