@@ -1,3 +1,14 @@
+window.addEventListener("load", () => {
+  disableButtons();
+});
+
+function disableButtons() {
+  let RPSButtons = document.querySelectorAll("#left > .choices > button");
+  RPSButtons.forEach((button) => {
+    button.disabled = true;
+  });
+}
+
 function playRockPaperScissors() {
   let playerScore = 0;
   let computerScore = 0;
