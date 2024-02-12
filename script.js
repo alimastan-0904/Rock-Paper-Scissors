@@ -32,6 +32,8 @@ function newGame() {
   updatePlayerScore(0);
   updateComputerScore(0);
   resetPlayerAvatar();
+  unhighlightPlayerChoice();
+  unhighlightComputerChoice();
 }
 
 function removeGrayScale() {
@@ -63,6 +65,24 @@ function resetPlayerAvatar() {
   playerAvatar.src = "./images/playerneutral.png";
 }
 
+function unhighlightPlayerChoice() {
+  const playerRPSIcons = document.querySelectorAll(
+    "#left > .choices > button >  img "
+  );
+  playerRPSIcons.forEach((icon) => {
+    icon.style.backgroundColor = "black";
+  });
+}
+
+function unhighlightComputerChoice() {
+  const computerRPSIcons = document.querySelectorAll(
+    "#right > .choices > div >  img "
+  );
+  computerRPSIcons.forEach((icon) => {
+    icon.style.backgroundColor = "black";
+  });
+}
+
 function addEventListenerToButtons() {
   const RPSButtons = document.querySelectorAll("#left > .choices > button");
   RPSButtons.forEach((button) => {
@@ -73,8 +93,12 @@ function addEventListenerToButtons() {
 }
 
 function playRound(event) {
+  unhighlightPlayerChoice();
+  unhighlightComputerChoice();
   const playerChoice = getPlayerChoice(event);
+  highlightPlayerChoice(event);
   const computerChoice = getComputerChoice();
+  highlightComputerChoice(computerChoice);
   compareChoices(playerChoice, computerChoice);
   checkForWinningScore(5);
 }
@@ -83,9 +107,24 @@ function getPlayerChoice(event) {
   return event.currentTarget.className;
 }
 
+function highlightPlayerChoice(event) {
+  event.target.style.backgroundColor = "blue";
+}
+
 function getComputerChoice() {
   const weaponChoice = ["rock", "scissors", "paper"];
   return weaponChoice[Math.floor(Math.random() * weaponChoice.length)];
+}
+
+function highlightComputerChoice(computerChoice) {
+  const computerRPSIcons = document.querySelectorAll(
+    "#right > .choices > div > img"
+  );
+  computerRPSIcons.forEach((icon) => {
+    if (icon.parentNode.className == computerChoice) {
+      icon.style.backgroundColor = "red";
+    }
+  });
 }
 
 function compareChoices(playerChoice, computerChoice) {
