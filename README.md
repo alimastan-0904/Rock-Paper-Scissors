@@ -9,6 +9,6 @@ It will test my ability to utilise beginner level HTML, CSS and JavaScript (both
 
 ## Acknowledgments
 
-Avatar Icons by [Tulpahn at Flaticon](https://www.flaticon.com/authors/tulpahn)
-Rock Paper Scissors Icons by [Dooder at Flaticon](https://www.flaticon.com/authors/dooder)
-Music created using [Online Sequencer](https://onlinesequencer.net/)
+- Avatar Icons by [Tulpahn at Flaticon](https://www.flaticon.com/authors/tulpahn)
+- Rock Paper Scissors Icons by [Dooder at Flaticon](https://www.flaticon.com/authors/dooder)
+- Music created using [Online Sequencer](https://onlinesequencer.net/)
