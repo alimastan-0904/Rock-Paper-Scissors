@@ -42,6 +42,10 @@ main {
   margin-bottom: 3%;
 }
 
+#text_container > button {
+  padding: 0.5rem;
+}
+
 #left,
 #right {
   flex-basis: 50%;
