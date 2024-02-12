@@ -13,6 +13,7 @@ start_button.addEventListener("click", () => {
   removeStartButton();
   addTextBox();
   newGame();
+  addEventListenerToButtons();
 });
 
 function removeStartButton() {
@@ -56,24 +57,32 @@ function updateComputerScore(score) {
   computerScoreDisplay.textContent = score;
 }
 
+function addEventListenerToButtons() {
+  const RPSButtons = document.querySelectorAll("#left > .choices > button");
+  RPSButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      playRound(event);
+    });
+  });
+}
+
+function playRound(event) {
+  const playerChoice = getPlayerChoice(event);
+  const computerChoice = getComputerChoice();
+}
+
+function getPlayerChoice(event) {
+  return event.currentTarget.className;
+}
+
+function getComputerChoice() {
+  const weaponChoice = ["rock", "scissors", "paper"];
+  return weaponChoice[Math.floor(Math.random() * weaponChoice.length)];
+}
+
 function playRockPaperScissors() {
   let playerScore = 0;
   let computerScore = 0;
-
-  function getPlayerChoice() {
-    return prompt("Please type in Rock, Paper or Scissors");
-  }
-
-  function getCompChoice() {
-    const weaponChoice = ["Rock", "Scissors", "Paper"];
-    return weaponChoice[Math.floor(Math.random() * weaponChoice.length)];
-  }
-
-  function playRound() {
-    const playerChoice = getPlayerChoice();
-    const computerChoice = getCompChoice();
-    compareChoices(playerChoice, computerChoice);
-  }
 
   function compareChoices(playerChoice, computerChoice) {
     if (playerChoice == computerChoice) {
