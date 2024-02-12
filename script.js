@@ -70,6 +70,7 @@ function playRound(event) {
   const playerChoice = getPlayerChoice(event);
   const computerChoice = getComputerChoice();
   compareChoices(playerChoice, computerChoice);
+  checkForWinningScore(5);
 }
 
 function getPlayerChoice(event) {
@@ -129,6 +130,14 @@ function increaseComputerScore() {
 function currentComputerScore() {
   const computerScoreDisplay = document.querySelector("#right > .score");
   return parseInt(computerScoreDisplay.textContent);
+}
+
+function checkForWinningScore(winningScore) {
+  if (currentPlayerScore() == winningScore) {
+    console.log("Player wins");
+  } else if (currentComputerScore() == winningScore) {
+    console.log("Computer wins");
+  }
 }
 
 function playRockPaperScissors() {
