@@ -134,10 +134,32 @@ function currentComputerScore() {
 
 function checkForWinningScore(winningScore) {
   if (currentPlayerScore() == winningScore) {
-    console.log("Player wins");
+    playerWin(winningScore);
   } else if (currentComputerScore() == winningScore) {
-    console.log("Computer wins");
+    playerLose(winningScore);
   }
+}
+
+function playerWin(winningScore) {
+  showPlayerWinMessage(winningScore);
+}
+
+function showPlayerWinMessage(winningScore) {
+  let finalResults = document.createElement("p");
+  finalResults.setAttribute("id", "final_results");
+  finalResults.textContent = `You got ${winningScore} points! You're a winner.`;
+  text_container.appendChild(finalResults);
+}
+
+function playerLose(winningScore) {
+  showPlayerLoseMessage(winningScore);
+}
+
+function showPlayerLoseMessage(winningScore) {
+  let finalResults = document.createElement("p");
+  finalResults.setAttribute("id", "final_results");
+  finalResults.textContent = `Computer got ${winningScore} points! You lose.`;
+  text_container.appendChild(finalResults);
 }
 
 function playRockPaperScissors() {
