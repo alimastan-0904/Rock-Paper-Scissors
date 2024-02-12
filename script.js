@@ -9,6 +9,21 @@ function disableButtons() {
   });
 }
 
+start_button.addEventListener("click", () => {
+  removeStartButton();
+  addTextBox();
+});
+
+function removeStartButton() {
+  text_container.removeChild(start_button);
+}
+
+function addTextBox() {
+  const textbox = document.createElement("p");
+  textbox.setAttribute("id", "textbox");
+  text_container.appendChild(textbox);
+}
+
 function playRockPaperScissors() {
   let playerScore = 0;
   let computerScore = 0;
