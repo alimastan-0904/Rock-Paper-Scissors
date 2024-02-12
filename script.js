@@ -205,4 +205,21 @@ function createResetButton() {
   resetButton.textContent = "Reset Game";
   resetButton.setAttribute("id", "reset_button");
   text_container.appendChild(resetButton);
+  resetButton.addEventListener("click", () => {
+    resetGame();
+  });
+}
+
+function resetGame() {
+  removeResetButton();
+  removeFinalResults();
+  newGame();
+}
+
+function removeResetButton() {
+  text_container.removeChild(reset_button);
+}
+
+function removeFinalResults() {
+  text_container.removeChild(final_results);
 }
