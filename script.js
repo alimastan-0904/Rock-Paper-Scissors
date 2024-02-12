@@ -135,8 +135,10 @@ function currentComputerScore() {
 function checkForWinningScore(winningScore) {
   if (currentPlayerScore() == winningScore) {
     playerWin(winningScore);
+    endGame();
   } else if (currentComputerScore() == winningScore) {
     playerLose(winningScore);
+    endGame();
   }
 }
 
@@ -183,4 +185,8 @@ function showLoseAvatar() {
 function playLoseSound() {
   const loseSound = new Audio("./music/lose.mp3");
   loseSound.play();
+}
+
+function endGame() {
+  disableButtons();
 }
