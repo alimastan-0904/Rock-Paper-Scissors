@@ -190,6 +190,18 @@ footer {
   }
 }
 
+@media screen and (max-width: 380px) {
+  #text_container {
+    font-size: 0.5rem;
+  }
+  .avatar img {
+    width: 200px;
+  }
+  .choices img {
+    width: 50px;
+  }
+}
+
 @media screen and (max-height: 600px) {
   #text_container {
     margin-top: 1%;
