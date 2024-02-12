@@ -31,6 +31,7 @@ function newGame() {
   enableButtons();
   updatePlayerScore(0);
   updateComputerScore(0);
+  resetPlayerAvatar();
 }
 
 function removeGrayScale() {
@@ -55,6 +56,11 @@ function updatePlayerScore(score) {
 function updateComputerScore(score) {
   const computerScoreDisplay = document.querySelector("#right > .score");
   computerScoreDisplay.textContent = score;
+}
+
+function resetPlayerAvatar() {
+  const playerAvatar = document.querySelector("#left > .avatar img");
+  playerAvatar.src = "./images/playerneutral.png";
 }
 
 function addEventListenerToButtons() {
