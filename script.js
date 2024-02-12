@@ -12,6 +12,7 @@ function disableButtons() {
 start_button.addEventListener("click", () => {
   removeStartButton();
   addTextBox();
+  newGame();
 });
 
 function removeStartButton() {
@@ -22,6 +23,37 @@ function addTextBox() {
   const textbox = document.createElement("p");
   textbox.setAttribute("id", "textbox");
   text_container.appendChild(textbox);
+}
+
+function newGame() {
+  removeGrayScale();
+  enableButtons();
+  updatePlayerScore(0);
+  updateComputerScore(0);
+}
+
+function removeGrayScale() {
+  const images = document.querySelectorAll("img");
+  images.forEach((image) => {
+    image.style.filter = "grayscale(0)";
+  });
+}
+
+function enableButtons() {
+  let RPSButtons = document.querySelectorAll("#left > .choices > button");
+  RPSButtons.forEach((button) => {
+    button.disabled = false;
+  });
+}
+
+function updatePlayerScore(score) {
+  const playerScoreDisplay = document.querySelector("#left > .score");
+  playerScoreDisplay.textContent = score;
+}
+
+function updateComputerScore(score) {
+  const computerScoreDisplay = document.querySelector("#right > .score");
+  computerScoreDisplay.textContent = score;
 }
 
 function playRockPaperScissors() {
