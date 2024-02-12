@@ -27,6 +27,8 @@ function addTextBox() {
 }
 
 function newGame() {
+  textbox.textContent = "Choose your weapon";
+  playIntroMusic();
   removeGrayScale();
   enableButtons();
   updatePlayerScore(0);
@@ -34,6 +36,11 @@ function newGame() {
   resetPlayerAvatar();
   unhighlightPlayerChoice();
   unhighlightComputerChoice();
+}
+
+function playIntroMusic() {
+  const introMusic = new Audio("./music/williamtell.mp3");
+  introMusic.play();
 }
 
 function removeGrayScale() {
