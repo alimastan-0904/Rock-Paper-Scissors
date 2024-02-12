@@ -220,6 +220,7 @@ function playWinSound() {
 function playerLose(winningScore) {
   showPlayerLoseMessage(winningScore);
   showLoseAvatar();
+  playLoseSound();
 }
 
 function showPlayerLoseMessage(winningScore) {
