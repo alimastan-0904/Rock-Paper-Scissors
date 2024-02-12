@@ -189,4 +189,20 @@ function playLoseSound() {
 
 function endGame() {
   disableButtons();
+  addGrayScale();
+  createResetButton();
+}
+
+function addGrayScale() {
+  const images = document.querySelectorAll("img");
+  images.forEach((image) => {
+    image.style.filter = "grayscale(1)";
+  });
+}
+
+function createResetButton() {
+  let resetButton = document.createElement("button");
+  resetButton.textContent = "Reset Game";
+  resetButton.setAttribute("id", "reset_button");
+  text_container.appendChild(resetButton);
 }
